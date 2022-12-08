@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My homepage{% endblock %}
+
+{% block body %}
+<h1>My homepage</p>
+
+<h2>My first entity</h2>
+{% for cat in cats %}
+    <h3>{{ cat.name }}</h3>
+    <p>A {{ cat.color }} cat.</p>
+{% endfor %}
+
+<h2>My second entity</h2>
+{% for human in humans %}
+    <h3>{{ human.name }}</h3>
+    <p>A {{ human.age }} years old human.</p>
+{% endfor %}
+
+{% endblock %}
