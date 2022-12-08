@@ -17,7 +17,7 @@ class MainController extends AbstractController
         $cats = $catRepository->findAll();
         $humans = $humanRepository->findAll();
 
-        return $this->render('home/index.html.twig', [
+        return $this->render('main/index.html.twig', [
             'cats' => $cats,
             'humans' => $humans
         ]);
