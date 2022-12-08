@@ -8,10 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\CatRepository;
 use App\Repository\HumanRepository;
 
-#[Route('/', name: 'app_')]
+#[Route(name: 'app_')]
 class MainController extends AbstractController
 {
-    #[Route('index', name: 'index')]
+    #[Route('/', name: 'index')]
     public function index(CatRepository $catRepository, HumanRepository $humanRepository): Response
     {
         $cats = $catRepository->findAll();
